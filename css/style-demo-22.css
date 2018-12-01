@@ -1,0 +1,613 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+-------------------------------------------------------------------*/
+
+@import url("default-template-style.css");
+@import url("divineartnav.css");
+@import url("divineartnav-style.css");
+@import url("divineartnav-animate.css");
+@import url("style-element.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/*------------------------------------------------
+[Table of contents]
+
+0. common Style 
+1. Loading 
+2. Nav Bar
+3. Welcome
+4. Our Service
+5. ANNOUNCEMENT
+6. testimonials
+7. Clients
+8. footer
+9. Some Responsive Style
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+# [Color codes]
+
+# Black : #000
+# yellow : #FAC11C
+# Grey  : #898989
+
+------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Typography]
+
+Body :		'Open Sans', sans-serif;
+Title and logo:	'Raleway', sans-serif;
+
+-------------------------------------------------------------------*/
+
+
+
+/*---Body---*/
+ 
+html,
+	body {
+	  height: 100%;
+	  width: 100%;
+	}
+	
+body {
+	color:#000;
+  	font-family :'Open Sans', sans-serif;
+}
+nav{
+	font-family :'Raleway', sans-serif;
+	font-weight :400;
+}
+
+a {
+	color: #000000;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.btn, .btn:hover {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+  	font-family :'Open Sans', sans-serif;
+}
+a:hover,
+a:focus {
+	color:  #FAC11C;
+	outline: none;
+	outline-offset: 0px;
+	text-decoration:none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family :'Raleway', sans-serif;
+	color:#333;
+	margin:0px 0px 0px 0px;
+	font-weight :300;
+}
+
+h1{
+	font-weight:600px;	
+	}
+	
+p {
+	line-height: 1.5;
+	color:#666;
+}
+
+/*-------white backgoround color for P-----*/
+.b-white p, h5, h6{
+	color:#666;	
+	}
+/*-------black backgoround color for P-----*/
+.b-black p, h5, h6{
+	color:#ccc;
+	line-height: 1.8;
+	}
+
+
+.bold{
+	font-weight:600;	
+}
+.heading{
+	padding-bottom:30px;	
+	}
+.yellow{
+	color:#FAC11C;
+}
+.white{
+	color: #fff;
+}
+.black{
+	color:#000;
+}
+.gray{
+	color:#898989;
+}
+.blue{
+	color:#1F2D3A;	
+	}
+.bg-blue{
+	background-color:#1F2D3A;	
+	}
+.bg-dark-blue{
+	background-color:#192632;
+	}
+.bg-yellow{
+	background-color:#FAC11C;
+}
+.bg-black{
+	background-color:#000;	
+	}
+.light-gray{
+	background-color:#f7f7f7;
+}
+.bg-white{
+	background-color:#FFF;	
+	}
+.off-white{
+	color:#ccc;	
+	}
+.light-black{
+	color:#666;	
+	}
+
+section{
+	padding:50px 0px 50px;
+}
+@media only screen and (max-width: 991px) {
+	section{
+	padding:25px 0px 25px;
+}
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: inline-table;
+    max-width: 100%;
+    height: auto;
+}
+.btn-default {
+    color: #FAC11C;
+    background-color: #fff;
+    border: 2px solid #fff;
+	border-radius:0px;
+	text-transform:uppercase;
+	margin-top:10px;
+}
+.btn-default:hover {
+    color: #fff;
+    background-color: #FAC11C;
+    border: 2px solid #fff	;
+	border-radius:0px;
+}
+.btn-default-1 {
+    color: #FAC11C;
+    background-color: transparent;
+    border: 2px solid #FAC11C;
+    border-radius: 0px;
+    text-transform: uppercase;
+	margin-top:10px;	
+}
+.btn-default-1:hover {
+    color: #fff;
+    background-color: #FAC11C;
+    border: 2px solid #FAC11C;
+    border-radius: 0px;
+}
+.btn-default-lg {
+    color: #FAC11C;
+    background-color: #fff;
+    border: 2px solid #fff;
+	border-radius:0px;
+	text-transform:uppercase;
+	margin-top:10px;
+	padding:20px;
+	font-size:1.7142857142857142em;
+}
+.btn-default-lg:hover{
+	color: #FAC11C;
+	background-color:#1f2d3a;
+	}
+
+.txt-box{
+	border-radius:0px;
+	}
+
+
+/*----loading---*/
+	
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/loading/loader-icons-set-2-32x64x128/loader-icons-set-2-32x64x128/128x128/Preloader_8.gif) center no-repeat #fff;
+}
+
+/*--  Start Nav --*/
+.logo{
+	padding-top: 5px;	
+	}
+
+nav.navbar ul.nav > li > a:hover, nav.navbar ul.nav > li.active > a:hover, nav.navbar ul.nav li.active > a {
+    border-bottom: 2px solid #FAC11C;
+}
+
+nav.navbar li.dropdown ul.dropdown-menu {
+    border-top-color: #FAC11C !important;
+}
+ul.cart-list > li.total > .btn, .attr-nav > ul > li > a span.badge, nav.navbar .share ul > li > a:hover, nav.navbar .share ul > li > a:focus {
+    background-color: #FAC11C;
+}
+ul.cart-list > li.total > .btn {
+    border-color: #FAC11C;
+}
+.attr-nav > ul > li.social-alt > a {
+    padding-left: 8px;
+	padding-right: 8px;
+}
+.attr-nav {
+    margin-left: 40px;
+}
+
+
+@media only screen and (max-width: 991px) {
+	.logo {
+		padding-top: 0px;
+	}	
+}
+@media (min-width: 1024px){
+nav.navbar.divinnav ul.nav > li > a {
+    padding: 10px 0px;
+}
+nav.navbar.divinnav ul.nav > li {
+    padding: 20px 15px;
+}
+}
+.side {
+	background-color: #FAC11C;
+}
+/*-- End Nav --*/
+
+
+
+
+/*-------------*/
+p{
+	margin-top:30px;	
+	}
+@media only screen and (max-width: 480px) {
+		p{
+	margin-top:10px;	
+	}
+	.cs-mt-top{
+	margin-top:0px;	
+	}
+}
+.cs-mt-top{
+	margin-top:20px;	
+	}
+/*-------------------Heading---------------------*/
+	.title{
+		margin-bottom:10px;	
+		}
+	.dart-headingstyle-one .dart-heading {
+		padding-bottom: 10px;
+		position: relative;
+		text-transform:uppercase;
+		font-weight:300;
+		font-size:3.4285714285714284em;
+	}
+	.title p{
+		margin-top:20px;
+		}
+	.dart-headingstyle-one .dart-heading:after {
+		content: "";
+		background: #FAC11C;
+		width: 28px;
+		height: 2px;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		margin-left: -14px;
+	}
+	.dart-headingstyle-one.text-left .dart-heading:after {
+		content: "";
+		background: #FAC11C;
+		width: 28px;
+		height: 2px;
+		position: absolute;
+		left: 0%;
+		bottom: 0;
+		margin-left: 0px;
+	}
+	.dart-headingstyle-one .dart-heading.white-dash:after {
+		background: #fff;
+	}
+	.dart-headingstyle-one .dart-heading.text-left:after {
+		left: 15px;
+	}
+/*--------------------End Heading---------------*/
+
+
+/*----------Welcome Message--------------*/
+.welcome{
+		
+	}
+.about{
+	padding-top:10px;	
+	}
+.about .column-1 h1, h2{
+		color:#FFF;
+	}
+
+@media only screen and (max-width: 480px) {
+	.inn-row{
+		margin-top:20px;	
+		}	
+}
+/*--------End Welcome Message--------*/
+
+/*-----Start Service--------------*/
+
+.services h2{
+	margin-top:20px;	
+	
+	}
+.services p{
+	margin-top:10px;	
+	}
+/*-----End Service--------------*/
+
+/*-----Start Service-1  --------------*/
+.service-1{
+	padding-top:100px;
+	padding-bottom:100px;	
+	}
+/*-----End Service-1 --------------*/
+
+/*------------------Start Projects--------------*/	
+@media only screen and (max-width: 991px) {
+.project_box{
+	    margin: 10px;
+}
+/*------------------End Projects--------------*/
+
+
+/*------------------Start Anouncement--------------*/	
+.announcement{
+	}
+.announcement h4{
+	margin:10px;	
+	}
+.announcement h2{
+	font-weight:600;
+}
+
+/*------------------End Anouncement--------------*/	
+
+
+/*-- Footer --*/
+/*---Footer style Here---*/
+
+
+	/*---Style 1---*/
+
+	.footerOne{
+		background-color: #000;
+		padding: 50px 0 0;
+	}
+	.footerOne .footer-widget h4 {
+		color: #fff;
+		margin-bottom: 30px;
+	}
+	.footerOne .footer-widget{
+		color: #ccc;
+	}
+	.footerOne .footer-widget.widget_text{
+		padding-right:20px;
+	}
+	.footerOne .footer-widget h4 {
+		color: #fff;
+		margin-bottom: 30px;
+	}
+	.footerOne .useful-links>ul>li>a {
+		line-height: 30px;
+		color: #ccc;
+	}
+	.footerOne .useful-links>ul>li>a:hover {
+		color: #fff;
+		text-decoration:none;
+	}
+	.footerOne .useful-links>ul>li>a i {
+		visibility:hidden;
+		margin-left: -10px;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.footerOne .useful-links>ul>li>a:hover i {
+		color: #FAC11C;
+		padding-right:10px;
+		margin-left: 0px;
+		visibility:visible;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+	.footerOne form {
+		padding:5px 0px;
+	}
+	.footerOne form .form-control {
+		background-color: #fff;
+		border: 1px solid transparent;
+		min-height: 40px;
+		padding: 0 20px;
+	}
+	.footerOne form .form-group{
+		margin-top:-2px;
+	}
+	.footerOne form button {
+		position: relative;
+		background-color: #fff;
+		border: 1px solid transparent;
+		color: #FAC11C;
+		min-height:40px;
+		border-radius:4px;
+		text-transform: uppercase;
+		padding:0 20px;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+	.footerOne form button:hover {
+		background-color: #FAC11C;
+		color: #fff;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+	.footerOne .newsletter-seb form span{
+		color:#fff;
+		padding-right: 30px;
+	}
+	.footerOne .payment-opt{
+		color:#fff;
+		padding: 10px 0px;
+	}
+	.footerOne .payment-opt span{
+		padding-right: 10px;
+	}
+	.footerOne .payment-opt img{
+		display:inline-block;
+	}	
+	.footerOne .footer-bottom-section{
+		text-align:center;
+	}
+	.footerOne .footer-bottom-section .copyright, .footerOne .footer-bottom-section .social a  {
+		color: #ccc;
+	}
+	.footerOne .footer-bottom-section .social a:hover  {
+		color: #FAC11C;
+	}
+	
+	@media (max-width : 991px) {
+	.footerOne .useful-links > ul > li > a {
+		line-height: 20px;
+	}
+	.footerOne .newsletter-seb form span, .footerOne .payment-opt span  {
+		display: block;
+		padding-bottom:15px;
+	}
+	.footerOne .newsletter-seb form span {
+		display: block;
+		padding-bottom:15px;
+	}
+	}
+	@media (max-width : 767px) {
+	.footerOne .footer-widget h4 {
+		margin-bottom: 10px;
+	}
+	.footerOne .useful-links > ul > li > a i {
+		margin-left: -5px;
+	}
+	}
+
+
+/*---Responsive Media Screen style---*/
+
+
+@media only screen and (max-width: 3500px) {
+/*body*/
+	body {
+		overflow-x: hidden;
+	}
+}
+	
+@media only screen and (max-width: 2500px) {}
+
+@media only screen and (max-width: 2100px) {}
+
+@media only screen and (max-width: 1600px) {}
+
+@media only screen and (max-width: 1566px) {}
+
+@media only screen and (max-width: 1366px) {}
+
+@media only screen and (min-width: 1300px) {
+	
+}	
+
+@media only screen and (max-width: 1280px) {}
+
+@media (min-width: 1280px) {}
+
+@media only screen and (max-width: 1199px) {
+
+}
+@media only screen and (max-width: 1024px) {
+	
+}
+
+@media only screen and (max-width: 991px) {
+	body{
+		font-size:100%;
+	}
+}
+
+
+/*--------------iPhone 6 plus landscape----------------*/
+@media only screen and (max-width: 767px) {
+	body{
+		font-size:100%;
+	}
+	
+}
+
+/*--------------iPhone 6 landscape----------------*/
+@media only screen and (max-width: 667px) {}
+
+/*--------------iPhone 5 landscape----------------*/
+@media only screen and (max-width: 568px) {}
+
+@media only screen and (max-width: 480px) {
+	body{
+		font-size:100%;
+	}
+}
+
+/*--------------iPhone 6 plus portrait----------------*/
+@media only screen and (max-width: 414px) {}
+
+/*--------------iPhone 6 portrait----------------*/
+@media only screen and (max-width: 375px) {}
+
+/*--------------iPhone 5 portrait----------------*/
+@media only screen and (max-width: 320px) {}
+
+@media only screen and (max-width: 300px) {}
+
+@media only screen and (max-width: 200px) {}
+
+
+

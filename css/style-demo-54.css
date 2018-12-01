@@ -1,0 +1,561 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+-------------------------------------------------------------------*/
+
+@import url("default-template-style.css");
+@import url("divineartnav.css");
+@import url("divineartnav-style.css");
+@import url("divineartnav-animate.css");
+@import url("style-element.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/*---------------------------------
+[Table of contents]
+0. Common Style
+1. Nav Bar
+2. slider
+3. Portfolio
+4. Testimonials
+5. Clients
+6. Footer
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+# [Color codes]
+
+# Black : #000
+# light-brown : #B78E53
+
+------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Typography]
+
+Body :		'Open Sans', sans-serif;
+Title and logo:	'Raleway', sans-serif;
+
+-------------------------------------------------------------------*/
+
+/*---Body---*/
+ 
+html,body {
+  height: 100%;
+  width: 100%;
+}
+	
+body {
+	color:#000;
+  	font-family:'Open Sans', sans-serif;
+}
+
+nav{
+	font-family :'Raleway', sans-serif;
+	font-weight :400;
+}
+
+a {
+	color: #000000;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+}
+.btn, .btn:hover {
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+	font-family:'Open Sans', sans-serif;
+}
+a:hover,
+a:focus {
+	color:  #B78E53;
+	outline: none;
+	outline-offset: 0px;
+	text-decoration:none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family :'Raleway', sans-serif;
+	color:#333;
+	font-weight :300;
+	
+}
+
+p {
+	line-height: 1.5;
+	color:#666;
+}
+
+/*-------white backgoround color for P-----*/
+.b-white p h5, h6{
+	color:#666;	
+}
+/*-------black backgoround color for P-----*/
+.b-black p, h6, h6{
+	color:#ccc;
+}
+.b-color p, h5, h6{
+	color:#f7f7f7;	
+}
+
+.bold{
+	font-weight:600;	
+}
+.heading{
+	padding-bottom:30px;	
+}
+.light-brown{
+	color:#B78E53;
+}
+.white{
+	color: #fff;
+}
+.black{
+	color:#000;
+}
+.gray{
+	color:#898989;
+}
+.red{
+	color:#F00;	
+}
+.bg-light-brown{
+	background-color:#B78E53;
+}
+.bg-black{
+	background-color:#000;	
+}
+.light-gray{
+	background-color:#f7f7f7;
+}
+.bg-gray{
+	background-color: #282828;
+}
+.bg-white{
+	background-color:#FFF;	
+}
+.off-white{
+	color:#ccc;	
+}
+.light-black{
+	color:#666;	
+}
+
+section{
+	padding:50px 0px 50px 0px;
+}
+@media only screen and (max-width: 991px) {
+	section{
+		padding:25px 0px 25px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.cs-mob-mb{
+		margin-bottom: 10px;
+	}
+	.cs-mob-mt{
+		margin-top: 10px;
+	}
+}
+
+/*----loading---*/
+	
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/loading/loader-icons-set-2-32x64x128/loader-icons-set-2-32x64x128/128x128/Preloader_6.gif) center no-repeat #fff;
+}
+
+/*--- Nav top bar ---*/
+
+.top-container {
+    float: left;
+    width: 100%;
+    color: #fff;
+    padding: 10px 0;
+	background-color: transparent;
+	position: absolute;    
+	z-index: 9;
+}
+.top-column-left, .top-column-right {
+    float: left;
+}
+.top-social-network, ul.contact-line, ul.register {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+ul.contact-line li:first-child {
+    border-left: none;
+    padding: 0;
+}
+ul.contact-line li, ul.register li {
+    float: left;
+    font-size: 12px;
+    list-style: none;
+    margin: 0 0 0 10px;
+    padding: 0 0 0 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+.top-column-right {
+    float: right;
+}
+.top-social-network a {
+    margin: 2px;
+}
+.top-container a, .top-container a:hover, .top-container a:focus, .top-container a:active {
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+.top-container .top-column-left {
+	display: none;
+}
+.top-container .top-column-right {
+    padding-right: 15px;
+}
+.top-container {
+	font-size:13px;
+}
+}
+
+
+
+/*--  Start Nav --*/
+nav.navbar .navbar-brand img.logo {
+    max-width: 150px;
+	margin-top: 5px;
+	
+}
+	
+@media only screen and (max-width: 1199px) {
+	nav.navbar .navbar-brand img.logo {
+    max-width: 130px;
+	margin-top: 12px;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.logo{
+		padding-top: 0px;
+		width:150px;
+		margin-top: -15px;	
+	}
+	nav.navbar .navbar-brand img.logo {
+    max-width: 130px;
+	margin-top: 0px;
+	}
+}
+nav.navbar .bg-menu {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+nav.navbar.divinnav.navbar-fixed.no-background {
+    top: 40px;
+}
+nav.navbar.divinnav.navbar-fixed {
+    top: 0;
+}
+nav.navbar.divinnav ul.dropdown-menu.megamenu-content .content ul.menu-col li a:hover, .check-list li:before, ul.cart-list > li > h6 > a, .attr-nav > ul > li > a:hover, .attr-nav > ul > li > a:focus, nav.navbar-sidebar ul.nav li.dropdown.on > a, nav.navbar-sidebar .dropdown .megamenu-content .col-menu.on .title, nav.navbar-sidebar ul.nav li.dropdown ul.dropdown-menu li a:hover, nav.navbar ul.nav li.dropdown.on > a, nav.navbar.navbar-inverse ul.nav li.dropdown.on > a, nav.navbar-sidebar ul.nav li.dropdown.on ul.dropdown-menu li.dropdown.on > a, nav.navbar .dropdown .megamenu-content .col-menu.on .title, nav.navbar ul.nav > li > a:hover, nav.navbar ul.nav > li.active > a:hover, nav.navbar ul.nav li.active > a, nav.navbar li.dropdown ul.dropdown-menu > li a:hover {
+    color: #000000 !important;
+}
+nav.navbar li.dropdown ul.dropdown-menu {
+    border-top-color: #000000 !important;
+}
+ul.cart-list > li.total > .btn, .attr-nav > ul > li > a span.badge, nav.navbar .share ul > li > a:hover, nav.navbar .share ul > li > a:focus {
+    background-color: #000000;
+}
+ul.cart-list > li.total > .btn {
+    border-color: #000000;
+}
+nav.navbar.navbar-transparent ul.nav > li > a:hover, nav.navbar.no-background ul.nav > li > a:hover, nav.navbar ul.nav li.scroll.active > a, nav.navbar.navbar-dark ul.nav li.dropdown ul.dropdown-menu > li > a:hover, nav.navbar ul.nav li.dropdown.on > a, nav.navbar-dark ul.nav li.dropdown.on > a {
+    color: #000000 !important;
+}
+
+.side {
+	background-color: #000000;
+}
+.top-search {
+    background-color: rgba(44, 174, 226, 0.5);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/*-- End Nav --*/
+
+
+
+/*--------Start heading------*/
+.dart-headingstyle-four span {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.dart-headingstyle-four .dart-heading {
+	padding-bottom: 15px;
+	position: relative;
+	margin-top: 0px;
+}
+.dart-headingstyle-four .dart-heading:after {
+	content: "";
+	background: #222222;
+	width: 50px;
+	height: 1px;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -25px;
+}
+.dart-headingstyle-four.text-left .dart-heading:after{
+	left: 0%;
+	margin-left: 0px;	
+}
+/*---------End heading--------*/
+
+/*----------------Start Portfolio---------------*/
+.portfolioOne{
+	padding: 0px;
+}
+.portfolioOne .item-box {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	text-align:center;
+}
+.portfolioOne .item-box .portfolio-item {
+	background: rgba(0, 0, 0, 0.9);
+	color: white;
+	opacity: 0;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.35s;
+	-moz-transition: all 0.35s;
+	transition: all 0.35s;
+}
+.portfolioOne .item-box .portfolio-item .item-info {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.portfolioOne .item-box:hover .portfolio-item {
+	opacity: 1;
+}
+.portfolioOne .item-box img.img-responsive{
+	display:inline-block;
+	width:100%;
+}
+.portfolioOne .portfolio-item .item-info .line {
+	height: 1px;
+	width: 0%;
+	margin: 15px auto;
+	background-color: #ffffff;
+	-webkit-transition: all 500ms ease-out;
+	-moz-transition: all 500ms ease-out;
+	-o-transition: all 500ms ease-out;
+	transition: all 500ms ease-out;
+}
+
+.portfolioOne .item-box:hover .item-info .line {
+	opacity: 1;
+	width: 40%;
+}
+/*-----------------End Portfolio-------------*/
+
+/*-------------- Start testimonials---------------*/
+.testimonialEight{
+	text-align:center;
+	background-image:url(../images/demo-54/bg-testimonials.jpg);
+	background-size:cover;
+	background-attachment:fixed;
+}	
+.testimonialEight #dart-quote-carousel.carousel {
+	padding-bottom: 30px;
+}
+.testimonialEight #dart-quote-carousel.carousel .carousel-inner .item {
+	  opacity: 0;
+	  -webkit-transition-property: opacity;
+  	  -ms-transition-property: opacity;
+	  transition-property: opacity;
+}
+.testimonialEight #dart-quote-carousel.carousel .carousel-inner .active {
+	  opacity: 1;
+	  -webkit-transition-property: opacity;
+	  -ms-transition-property: opacity;
+	  transition-property: opacity;
+}
+.testimonialEight #dart-quote-carousel.carousel .carousel-indicators {
+	bottom: 0px;
+	z-index:2;
+}
+.testimonialEight #dart-quote-carousel.carousel .carousel-indicators  li {
+	  background-color: #848484;
+	  border: none;
+}
+.testimonialEight .carousel .carousel-indicators .active{
+	  background-color: #0a8dcc;
+	  border: none;
+	  width:10px; 
+	  height:10px;
+	  margin:1px;
+}
+.testimonialEight #dart-quote-carousel blockquote {
+	text-align: center;
+	border: none;
+}
+.testimonialEight #dart-quote-carousel .profile-circle {
+	width: 100px;
+	height: 70px;
+	margin: 0 auto;
+	border-radius: 100px;
+}
+.testimonialEight .item .name{ 
+	color:#ccc;
+}
+.testimonialEight .item .position{
+	text-align:left; 
+	margin-left:20px;
+	color:#ccc;
+}
+.testimonialEight p{
+	color:#f7f7f7;	
+}
+/*----------------End testimonials---------------*/
+
+/*------------Start Client--------------*/
+.client{
+	display: inline-block;
+}
+/*-------------End Client----------------*/
+
+/*-----------Start Footer-------------*/
+.footerTwo{
+	background-color: #F8F8F8;
+	padding: 50px 0 30px;
+	margin-top:-5px;
+}	
+.footerTwo .foooter-logo{
+	display:inline-block;
+	margin-bottom:30px;	
+}
+.footerTwo .footer-bottom-section{
+	text-align:center;
+}
+.footerTwo .footer-bottom-section .footer-link li{
+	padding: 10px 20px;
+	font-family:'Montserrat', sans-serif;
+}
+.footerTwo .footer-bottom-section .footer-link a{
+	color:#666;
+}
+.footerTwo .footer-bottom-section .footer-link a:hover{
+	color: #000;
+}
+.footerTwo .footer-bottom-section .copyright  {
+	color: #666;
+}
+@media (max-width : 991px) {
+	.footerTwo {
+		padding: 30px 0 10px;
+	}
+}
+@media (max-width : 767px) {
+	.footerTwo {
+		padding: 20px 0 0px;
+	}
+	.footerTwo .footer-bottom-section .footer-link li {
+		padding: 5px 5px;
+	}
+}
+/*----------End Footer---------------*/
+
+/*---Responsive Media Screen style---*/
+
+@media only screen and (max-width: 3500px) {
+/*body*/
+	body {
+		overflow-x: hidden;
+	}
+}
+	
+@media only screen and (max-width: 2500px) {}
+
+@media only screen and (max-width: 2100px) {}
+
+@media only screen and (max-width: 1600px) {}
+
+@media only screen and (max-width: 1566px) {}
+
+@media only screen and (max-width: 1366px) {}
+
+@media only screen and (min-width: 1300px) {
+	
+}	
+
+@media only screen and (max-width: 1280px) {}
+
+@media (min-width: 1280px) {}
+
+@media only screen and (max-width: 1199px) {
+
+}
+@media only screen and (max-width: 1024px) {
+	
+}
+
+@media only screen and (max-width: 991px) {
+	body{
+		font-size:100%;
+	}
+}
+
+/*--------------iPhone 6 plus landscape----------------*/
+@media only screen and (max-width: 767px) {
+	body{
+		font-size:100%;
+	}
+	
+}
+
+/*--------------iPhone 6 landscape----------------*/
+@media only screen and (max-width: 667px) {}
+
+/*--------------iPhone 5 landscape----------------*/
+@media only screen and (max-width: 568px) {}
+
+@media only screen and (max-width: 480px) {
+	body{
+		font-size:100%;
+	}
+	
+}
+
+/*--------------iPhone 6 plus portrait----------------*/
+@media only screen and (max-width: 414px) {}
+
+/*--------------iPhone 6 portrait----------------*/
+@media only screen and (max-width: 375px) {}
+
+/*--------------iPhone 5 portrait----------------*/
+@media only screen and (max-width: 320px) {}
+
+@media only screen and (max-width: 300px) {}
+
+@media only screen and (max-width: 200px) {}
+
+
+

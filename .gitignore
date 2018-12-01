@@ -1,0 +1,6 @@
+.idea/*
+.hg/*
+.idea
+.hg
+db.sqlite3
+*.pyc
